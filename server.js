@@ -58,6 +58,7 @@ app.use(express.json());
 
 // // Log requests to the access.log file
 // app.use(morgan("combined", { stream: accessLogStream }));
+app.use(morgan("dev"));
 
 //routes
 app.use("/api/v1/user", require("./routes/userRoutes"));

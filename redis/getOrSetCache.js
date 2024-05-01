@@ -1,8 +1,6 @@
 
-import { REDIS_EXPIRATION_TIME } from "../config/index.js";
-import client from "./client.js";
+const client =require( "./client.js");
 
-const DEFAULT_EXPIRATION = REDIS_EXPIRATION_TIME;
 
 async function getOrSetCache(key, cb) {
   const data = await client.get(key);
@@ -16,4 +14,4 @@ async function getOrSetCache(key, cb) {
   return freshData;
 }
 
-export { getOrSetCache };
+module.exports= { getOrSetCache };

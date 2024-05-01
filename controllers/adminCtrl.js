@@ -1,5 +1,6 @@
 const doctorModel = require("../models/doctorModel");
 const userModel = require("../models/userModels");
+const { getOrSetCache } = require("../redis/getOrSetCache");
 
 const getAllUsersController = async (req, res) => {
   try {
@@ -21,20 +22,25 @@ const getAllUsersController = async (req, res) => {
 
 const getAllDoctorsController = async (req, res) => {
   try {
-    const doctors = await doctorModel.find({});
-    res.status(200).send({
+    const doctors = await getOrSetCache("doctors", async () => {
+      return doctorModel.find();
+    });
+
+    res.status(200).send( {
       success: true,
       message: "Doctors Data list",
       data: doctors,
     });
-  } catch (error) {
+  }  catch (error) {
     console.log(error);
     res.status(500).send({
       success: false,
-      message: "error while getting doctors data",
+      message: "Eror in Getting Doctors",
       error,
     });
   }
+   
+    
 };
 
 // doctor account status

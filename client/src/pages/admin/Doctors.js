@@ -41,25 +41,7 @@ const Doctors = () => {
   const [searchValue, setSearchValue] = useState("");
   const [loadingTime, setLoadingTime] = useState(null); // Define setLoadingTime state
 
-  const getDoctors = async () => {
-    try {
-      const startLoadingTime = performance.now(); // Start time
-      const res = await axios.get("/api/v1/admin/getAllDoctors", {
-        headers: {
-          Authorization: `Bearer ${localStorage.getItem("token")}`,
-        },
-      });
-      const endLoadingTime = performance.now(); // End time
-      setLoadingTime(endLoadingTime - startLoadingTime); // Calculate loading time
-
-      if (res.data.success) {
-        setDoctors(res.data.data);
-      }
-    } catch (error) {
-      console.log(error);
-    }
-  };
-
+  
 
   const handleAccountStatus = async (record, status) => {
     try {
@@ -89,6 +71,25 @@ const Doctors = () => {
   };
 
   useEffect(() => {
+    const getDoctors = async () => {
+      try {
+        const startLoadingTime = performance.now(); // Start time
+        const res = await axios.get("/api/v1/admin/getAllDoctors", {
+          headers: {
+            Authorization: `Bearer ${localStorage.getItem("token")}`,
+          },
+        });
+        const endLoadingTime = performance.now(); // End time
+        setLoadingTime(endLoadingTime - startLoadingTime); // Calculate loading time
+
+        if (res.data.data.success) {
+          setDoctors(res.data.data.data);
+        }
+      } catch (error) {
+        console.log(error);
+      }
+    };
+  
     getDoctors();
   }, []);
 

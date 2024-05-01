@@ -1,5 +1,5 @@
 
-import { Redis } from "@upstash/redis";
+const { Redis } = require( "@upstash/redis");
 // import { REDIS_TOKEN, REDIS_URL } from "../config/index.js";
 
 const client = new Redis({
@@ -7,4 +7,4 @@ const client = new Redis({
     token: 'AcmnAAIncDE1NmQzMjJiZDY5OTU0NDA0YWQzNWJlMWYyMDA0YzUyOXAxNTE2MjM',
 });
 
-export default client;
+module.exports= client;
