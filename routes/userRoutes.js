@@ -310,4 +310,3 @@ router.post("/booking-availbility", authMiddleware, bookingAvailabilityControlle
 router.get("/user-appointments", authMiddleware, userAppointmentsController);
 
 module.exports = router;
-

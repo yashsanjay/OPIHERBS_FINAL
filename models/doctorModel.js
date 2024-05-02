@@ -53,11 +53,14 @@ const doctorSchema = new mongoose.Schema(
     },
     timings: {
       type: Array,
-      required: [true, "wrok timing is required"],
+      required: [true, "work timing is required"],
     },
   },
   { timestamps: true }
 );
+
+// Indexes
+doctorSchema.index({ userId: 1 }); // Index on userId field
 
 const doctorModel = mongoose.model("doctors", doctorSchema);
 module.exports = doctorModel;

@@ -4,7 +4,7 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest --detectOpenHandles",
     "start": "node server.js",
     "server": "nodemon serevr.js",
     "client": "npm start --prefix ./client ",
@@ -18,6 +18,7 @@
     "@fortawesome/free-solid-svg-icons": "^6.5.1",
     "@fortawesome/react-fontawesome": "^0.2.0",
     "@reduxjs/toolkit": "^2.2.1",
+    "@upstash/redis": "^1.30.0",
     "antd": "^5.14.1",
     "axios": "^1.6.7",
     "bcrypt": "^5.1.1",
@@ -37,10 +38,21 @@
     "react-redux": "^9.1.0",
     "react-router-dom": "^6.22.1",
     "react-scripts": "^5.0.1",
+    "redis": "^4.6.13",
     "styled-components": "^6.1.8",
     "swagger-jsdoc": "^6.2.8",
     "swagger-ui-express": "^5.0.0",
     "web-vitals": "^3.5.2"
   },
-  "proxy": "http://localhost:3000"
+  "proxy": "http://localhost:3000",
+  "devDependencies": {
+    "@babel/core": "^7.24.5",
+    "@babel/preset-env": "^7.24.5",
+    "@babel/preset-react": "^7.24.1",
+    "@testing-library/react": "^15.0.5",
+    "@testing-library/user-event": "^14.5.2",
+    "babel-jest": "^29.7.0",
+    "jest": "^27.5.1",
+    "supertest": "^7.0.0"
+  }
 }

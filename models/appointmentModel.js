@@ -39,6 +39,11 @@ const appointmentSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
+// Indexes
+appointmentSchema.index({ userId: 1 }); // Index on userId field
+appointmentSchema.index({ doctorId: 1 }); // Index on doctorId field
+appointmentSchema.index({ doctorInfo: "text" }); // Text index on doctorInfo field
+appointmentSchema.index({ userInfo: "text" }); // Text index on userInfo field
 const appointmentModel = mongoose.model("appointments", appointmentSchema);
 
 module.exports = appointmentModel;

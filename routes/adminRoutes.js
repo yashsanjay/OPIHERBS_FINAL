@@ -53,7 +53,7 @@ router.get("/getAllUsers", authMiddleware, getAllUsersController);
  *       500:
  *         description: Error while fetching doctors data
  */
-router.get("/getAllDoctors", authMiddleware, getAllDoctorsController);
+router.get("/getAllDoctors", getAllDoctorsController);
 
 /**
  * @swagger

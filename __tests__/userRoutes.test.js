@@ -28,10 +28,15 @@ app.use(express.json()); // Enable JSON body parsing
 app.use(userRouter);
 
 describe("User Routes", () => {
-  beforeEach(() => {
-    jest.clearAllMocks();
+  let expectedResponse;
+
+  beforeAll(() => {
+    expectedResponse = { success: true };
   });
 
+  afterEach(() => {
+    jest.clearAllMocks();
+  });
   it("should call loginController when POST /login", async () => {
     // Arrange
     const userData = { username: "testuser", password: "testpassword" };
