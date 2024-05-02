@@ -116,7 +116,7 @@ html {
 .ourdoc .ourboxcontainer .ourbox .share a:hover {
     background: white;
     color: white;
-    box-shadow: var(--box-shadow);
+    box-shadow: black;
 }
 
 

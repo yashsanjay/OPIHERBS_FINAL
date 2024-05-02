@@ -15,6 +15,10 @@ const axios = require("axios");
 const swaggerJsdoc = require("swagger-jsdoc");
 const swaggerUi = require("swagger-ui-express");
 
+const path =require('path');
+
+
+
 //dotenv config
 dotenv.config();
 
@@ -32,6 +36,12 @@ connectDB();
 
 //rest object
 const app = express();
+
+app.use(express.static(path.join(__dirname, './client/build')));
+
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, './client/build/index.html'));
+});
 
 const storage = multer.diskStorage({
   destination: 'uploads/',
