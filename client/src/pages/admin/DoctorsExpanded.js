@@ -8,11 +8,12 @@ import './DoctorsExpanded.css'
 
 const DoctorsExpandedWrapper = styled.div`
   max-width: 1350px;
-  margin: 0 auto;
-  overflow: scroll;
-  height: 200%;
-  padding: 50px;
+  margin: 50px auto; /* Adjusted margin for better spacing */
+  overflow: auto;
+  height: 100%; /* Changed height to 100% */
+  padding: 30px; /* Reduced padding */
 `;
+
 
 const DoctorsExpanded = () => {
   const [doctorDetails, setDoctorDetails] = useState(null);

@@ -1,73 +1,72 @@
-/* Adjustments to existing CSS */
+/* DoctorsExpanded.css */
 
+/* Wrapper styles */
 .doctors-expanded-wrapper {
-    max-width: 1350px;
-    margin: 20px auto; /* Adjusted margin for better spacing */
-    padding: 20px;
+  max-width: 1350px;
+  margin: 50px auto; /* Centered with fixed margin */
+  overflow: auto; /* Scroll only if needed */
+  padding: 20px; /* Reduced padding */
+}
+
+/* Heading styles */
+.doctors-expanded-heading {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333; /* Dark text color */
+}
+
+/* Table styles */
+.doctors-table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 12px; /* Rounded corners */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Enhanced box shadow effect */
+  overflow: hidden; /* Hide overflow content */
+}
+
+/* Table heading styles */
+.doctors-table th {
+  background-color: #f8f8f8; /* Light gray background */
+  font-weight: bold;
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ccc; /* Light border */
+}
+
+/* Table cell styles */
+.doctors-table td {
+  padding: 10px;
+  border-bottom: 1px solid #ccc; /* Light border */
+}
+
+/* Personal details row */
+.personal-details-row {
+  background-color: #f0f9ff; /* Light blue background */
+}
+
+/* Professional details row */
+.professional-details-row {
+  background-color: #f9f4ff; /* Light purple background */
+}
+
+/* Additional row */
+.additional-row {
+  background-color: #fafff0; /* Light yellow background */
+}
+
+/* Info styles */
+.doctors-expanded-info {
+  font-size: 18px;
+  color: #444; /* Dark text color */
+}
+
+/* Responsive styles */
+@media (max-width: 767px) {
+  /* Adjust column width for smaller screens */
+  .doctors-table th,
+  .doctors-table td {
+    padding: 8px;
+    font-size: 16px;
   }
-  
-  .doctors-expanded-heading {
-    text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 30px;
-  }
-  
-  .doctors-expanded-subheading {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-  }
-  
-  .doctors-expanded-info {
-    font-size: 1.2rem;
-    margin-bottom: 8px;
-  }
-  
-  .doctors-expanded-row {
-    display: flex;
-    flex-wrap: wrap;
-    margin-right: -10px; /* Adjusted negative margin for better alignment */
-    margin-left: -10px; /* Adjusted negative margin for better alignment */
-  }
-  
-  .doctors-expanded-col {
-    flex: 0 0 100%;
-    max-width: 100%;
-    padding-right: 10px; /* Adjusted padding for better spacing */
-    padding-left: 10px; /* Adjusted padding for better spacing */
-  }
-  
-  @media (min-width: 576px) {
-    .doctors-expanded-col {
-      flex: 0 0 50%;
-      max-width: 50%;
-    }
-  }
-  
-  @media (min-width: 768px) {
-    .doctors-expanded-col {
-      flex: 0 0 33.333333%;
-      max-width: 33.333333%;
-    }
-  }
-  
-  @media (min-width: 992px) {
-    .doctors-expanded-col {
-      flex: 0 0 25%;
-      max-width: 25%;
-    }
-  }
-  
-  /* Box Shadow Effect */
-  .doctors-expanded-col {
-    background-color: #fff; /* Added background color */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: 0.3s;
-    border-radius: 8px;
-    padding: 20px;
-    margin-bottom: 20px;
-  }
-  
-  .doctors-expanded-col:hover {
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  }
-  
+}

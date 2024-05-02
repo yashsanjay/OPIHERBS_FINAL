@@ -96,7 +96,7 @@ const AdminAppointments = () => {
       render: (text) => new Date(text).toLocaleDateString(),
     },
     {
-      title: "Number of Patients",
+      title: "Number of Patients visited in total",
       dataIndex: "doctorId", // Assuming you have a doctorId in your appointment data
       render: (doctorId) => doctorPatientCounts[doctorId] || 0,
     },
