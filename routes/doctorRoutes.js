@@ -10,56 +10,56 @@ const {
 } = require("../controllers/doctorCtrl");
 const authMiddleware = require("../middlewares/authMiddleware");
 const router = express.Router();
+// 
+// /**
+//  * @swagger
+//  * securityDefinitions:
+//  *   BearerAuth:
+//  *     type: apiKey
+//  *     name: Authorization
+//  *     in: header
+//  *
+//  * definitions:
+//  *   DoctorProfileUpdate:
+//  *     type: object
+//  *     properties:
+//  *       userId:
+//  *         type: string
+//  *       // Add other properties of doctor profile here
 
-/**
- * @swagger
- * securityDefinitions:
- *   BearerAuth:
- *     type: apiKey
- *     name: Authorization
- *     in: header
- *
- * definitions:
- *   DoctorProfileUpdate:
- *     type: object
- *     properties:
- *       userId:
- *         type: string
- *       // Add other properties of doctor profile here
-
- *   AppointmentStatusUpdate:
- *     type: object
- *     properties:
- *       appointmentsId:
- *         type: string
- *       status:
- *         type: string
- *         enum: [approved, cancelled, rescheduled]
- *
- * /api/v1/doctor/getDoctorInfo:
- *   post:
- *     security:
- *       - BearerAuth: []
- *     tags:
- *       - Doctor
- *     summary: Fetch doctor information
- *     description: Fetches information about a doctor based on the provided user ID
- *     parameters:
- *       - in: body
- *         name: body
- *         description: User ID of the doctor
- *         required: true
- *         schema:
- *           type: object
- *           properties:
- *             userId:
- *               type: string
- *     responses:
- *       200:
- *         description: Doctor data fetched successfully
- *       500:
- *         description: Error in fetching doctor details
- */
+//  *   AppointmentStatusUpdate:
+//  *     type: object
+//  *     properties:
+//  *       appointmentsId:
+//  *         type: string
+//  *       status:
+//  *         type: string
+//  *         enum: [approved, cancelled, rescheduled]
+//  *
+//  * /api/v1/doctor/getDoctorInfo:
+//  *   post:
+//  *     security:
+//  *       - BearerAuth: []
+//  *     tags:
+//  *       - Doctor
+//  *     summary: Fetch doctor information
+//  *     description: Fetches information about a doctor based on the provided user ID
+//  *     parameters:
+//  *       - in: body
+//  *         name: body
+//  *         description: User ID of the doctor
+//  *         required: true
+//  *         schema:
+//  *           type: object
+//  *           properties:
+//  *             userId:
+//  *               type: string
+//  *     responses:
+//  *       200:
+//  *         description: Doctor data fetched successfully
+//  *       500:
+//  *         description: Error in fetching doctor details
+//  */
 router.post("/getDoctorInfo", authMiddleware, getDoctorInfoController);
 
 /**
