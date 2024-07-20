@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/OPIHERBS_FINAL/static/css/main.5c6480f4.css",
+    "main.js": "/OPIHERBS_FINAL/static/js/main.72d4b7ee.js",
+    "static/js/714.6073f622.chunk.js": "/OPIHERBS_FINAL/static/js/714.6073f622.chunk.js",
+    "static/media/bimg2.jpg": "/OPIHERBS_FINAL/static/media/bimg2.2552796edf337033c551.jpg",
+    "static/media/docpic.jpg": "/OPIHERBS_FINAL/static/media/docpic.650a9564305fb058e65d.jpg",
+    "index.html": "/OPIHERBS_FINAL/index.html",
+    "main.5c6480f4.css.map": "/OPIHERBS_FINAL/static/css/main.5c6480f4.css.map",
+    "main.72d4b7ee.js.map": "/OPIHERBS_FINAL/static/js/main.72d4b7ee.js.map",
+    "714.6073f622.chunk.js.map": "/OPIHERBS_FINAL/static/js/714.6073f622.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5c6480f4.css",
+    "static/js/main.72d4b7ee.js"
+  ]
+}
