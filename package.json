@@ -6,12 +6,12 @@
   "scripts": {
     "test": "jest --detectOpenHandles",
     "start": "node server.js",
-    "server": "nodemon serevr.js",
-    "client": "npm start --prefix ./client ",
-    "dev": "concurrently \"npm start\" \"npm run client\" --host 0.0.0.0"
+    "server": "nodemon server.js",
+    "client": "npm start --prefix ./client",
+    "dev": "concurrently \"npm run server\" \"npm run client\" --host 0.0.0.0"
   },
   "keywords": [],
-  "author": "techinfyt ",
+  "author": "techinfyt",
   "license": "MIT",
   "dependencies": {
     "@fortawesome/free-brands-svg-icons": "^6.5.1",

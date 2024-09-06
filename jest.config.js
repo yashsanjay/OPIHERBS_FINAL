@@ -1,9 +1,9 @@
 module.exports = {
-    // Other Jest configuration options...
-    
+  // Other Jest configuration options...
+  
 
-    transform: {
-      '^.+\\.jsx?$': 'babel-jest'
-    }
-    
-  };
+  transform: {
+    '^.+\\.jsx?$': 'babel-jest'
+  }
+  
+};
